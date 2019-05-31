@@ -3,144 +3,495 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    font-family: 'Rubik', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-family: "Rubik", sans-serif;
 }
 
 p {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 
 .container {
-    width: 800px;
-    margin: 0 auto;
+  width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  width: 800px;
+  height: 40px;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+nav {
+  display: flex;
+  width: 650px;
+  height: 40px;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 85%;
 }
 
 .top-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed black;
+}
+
+.top-content img {
+  margin-top: 40px;
+  margin-bottom: 24px;
 }
 
 .top-content .text-container {
-    width: 48%;
-    padding: 0 1%;
-    padding-bottom: 20px;  
+  width: 48%;
+  padding: 0 1%;
+  padding-bottom: 20px;
 }
 
-.middle-content {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
+.top-content .about-text-container {
+  width: 100%;
+  padding: 0 1%;
+  padding-bottom: 20px;
+}
+
+#index-mid {
+  margin-bottom: 20px;
+  border-bottom: 1px dashed black;
+}
+
+#about-mid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.middle-content .mid-container {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: 400px;
+  justify-content: space-evenly;
+  border-bottom: 1px dashed black;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+.middle-content .mid-container .text-container {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-evenly;
+}
+
+@keyframes button-fade {
+  0% {
+    background: black;
+    border: 2px solid white;
+    color: white;
+  }
+  50% {
+    background: lightgray;
+    border: 2px solid silver;
+    color: silver;
+  }
+  100% {
+    background: white;
+    border: 2px solid black;
+    color: black;
+  }
+}
+.text-container button {
+  width: 125px;
+  height: 40px;
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 100%;
+  animation-name: button-fade;
+  animation-duration: 6s;
 }
 
 .middle-content h2 {
-    padding: 0 2%;
-    margin-bottom: 0;
+  /* padding: 0 2%; */
+  margin-bottom: 0;
 }
 
 .middle-content .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .middle-content .boxes .box {
-    width: 12.5%;
-    height: 100px;
+  width: 12.5%;
+  height: 100px;
+  margin: 20px 2.5%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes color-change-1 {
+  0% {
     background: black;
-    margin: 20px 2.5%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: teal;
+  }
+}
+
+#box1 {
+  background: teal;
+  animation-name: color-change-1;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-2 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: gold;
+  }
+}
+
+#box2 {
+  background: gold;
+  animation-name: color-change-2;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-3 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: cadetblue;
+  }
+}
+
+#box3 {
+  background: cadetblue;
+  animation-name: color-change-3;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-4 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: coral;
+  }
+}
+
+#box4 {
+  background: coral;
+  animation-name: color-change-4;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-5 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: crimson;
+  }
+}
+
+#box5 {
+  background: crimson;
+  animation-name: color-change-5;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-6 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: forestgreen;
+  }
+}
+
+#box6 {
+  background: forestgreen;
+  animation-name: color-change-6;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-7 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: darkorchid;
+  }
+}
+
+#box7 {
+  background: darkorchid;
+  animation-name: color-change-7;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-8 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: hotpink;
+  }
+}
+
+#box8 {
+  background: hotpink;
+  animation-name: color-change-8;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-9 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: indigo;
+  }
+}
+
+#box9 {
+  background: indigo;
+  animation-name: color-change-9;
+  animation-duration: 6s;
+}
+
+@keyframes color-change-10 {
+  0% {
+    background: black;
+  }
+  50% {
+    background: white;
+  }
+  100% {
+    background: dodgerblue;
+  }
+}
+
+#box10 {
+  background: dodgerblue;
+  animation-name: color-change-10;
+  animation-duration: 6s;
 }
 
 .bottom-content {
-    display: flex;
-    margin: 0 2% 20px;
-    justify-content: space-around;
+  display: flex;
+  margin: 0 2% 20px;
+  justify-content: space-around;
 }
 
 .bottom-content .text-container {
-    padding-right: 4%;
+  padding-right: 4%;
 }
 
 .bottom-content .text-container:last-child {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 footer {
-    width: 100%;
-    background: black;
+  width: 100%;
+  background: black;
 }
 
 footer nav {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 2%;
+  font-size: 14px;
 }
 
 footer nav a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
